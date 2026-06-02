@@ -1,0 +1,324 @@
+/* --- CONTACT HERO --- */
+.contact-hero {
+  background-color: var(--bg-white);
+  padding: 80px 0 40px;
+  text-align: center;
+}
+
+.contact-hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-hero-content h1 {
+  font-size: 2.75rem;
+  color: var(--primary-navy);
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.contact-hero-content p {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+/* --- CONTACT GRID --- */
+.contact-section {
+  background-color: var(--bg-light);
+  padding-bottom: 80px;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 40px;
+  align-items: start;
+}
+
+/* Left Column: Form Card */
+.contact-form-card {
+  background-color: var(--bg-white);
+  border-radius: var(--border-radius-lg);
+  padding: 48px;
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--border-color);
+}
+
+.form-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group-full {
+  grid-column: span 2;
+}
+
+.form-group label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--primary-navy);
+}
+
+.form-group input,
+.form-group select {
+  padding: 14px 18px;
+  border-radius: var(--border-radius-sm);
+  border: 1px solid var(--border-color);
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  outline: none;
+  transition: var(--transition-fast);
+  background-color: var(--bg-light);
+  width: 100%;
+}
+
+.form-group select {
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%230A1C33' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><polyline points='6 9 12 15 18 9'></polyline></svg>");
+  background-repeat: no-repeat;
+  background-position: right 18px center;
+  background-size: 16px;
+  padding-right: 40px;
+  color: var(--text-dark);
+}
+
+.form-group select:invalid,
+.form-group select option[value=""] {
+  color: var(--text-muted);
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: var(--primary-navy);
+  background-color: var(--bg-white);
+  box-shadow: 0 0 0 2px rgba(10, 28, 51, 0.1);
+}
+
+.contact-form-card .btn {
+  margin-top: 10px;
+  padding: 16px 28px;
+  font-size: 0.9rem;
+  letter-spacing: 0.05em;
+  display: inline-flex;
+  gap: 10px;
+  width: 100%;
+}
+
+/* Right Column: Info Cards */
+.contact-info-col {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* WhatsApp Card */
+.whatsapp-card {
+  background-color: var(--accent-green-bg);
+  border: 1px solid rgba(34, 197, 94, 0.2);
+  border-radius: var(--border-radius-lg);
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  cursor: pointer;
+  transition: var(--transition-normal);
+  color: var(--text-dark);
+}
+
+.whatsapp-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 15px -3px rgba(34, 197, 94, 0.1);
+}
+
+.whatsapp-icon-box {
+  width: 48px;
+  height: 48px;
+  background-color: var(--accent-green);
+  color: var(--bg-white);
+  border-radius: var(--border-radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.whatsapp-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.whatsapp-text h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #166534; /* Dark green */
+}
+
+.whatsapp-text p {
+  font-size: 0.85rem;
+  color: #15803d;
+}
+
+.whatsapp-arrow {
+  color: #166534;
+}
+
+/* Address & Map Card */
+.address-card {
+  background-color: var(--bg-white);
+  border-radius: var(--border-radius-lg);
+  border: 1px solid var(--border-color);
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  box-shadow: var(--shadow-sm);
+}
+
+.address-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.address-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--primary-navy);
+  border-bottom: 2px solid var(--primary-navy);
+  padding-bottom: 4px;
+}
+
+.address-text {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+.map-container {
+  position: relative;
+  border-radius: var(--border-radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+}
+
+.map-container img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  transition: var(--transition-normal);
+}
+
+.map-container:hover img {
+  transform: scale(1.05);
+}
+
+.map-btn {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  background-color: var(--bg-white);
+  color: var(--text-dark);
+  padding: 8px 14px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border-radius: 4px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  box-shadow: var(--shadow-md);
+  z-index: 2;
+  border: none;
+  cursor: pointer;
+  transition: var(--transition-fast);
+}
+
+.map-btn:hover {
+  background-color: var(--primary-navy);
+  color: var(--bg-white);
+}
+
+/* Security Card */
+.security-card {
+  background-color: #F8FAFC;
+  border: 1px dashed var(--border-color);
+  border-radius: var(--border-radius-lg);
+  padding: 24px;
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.security-icon {
+  color: var(--accent-gold);
+  flex-shrink: 0;
+}
+
+.security-text {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.security-text h3 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--primary-navy);
+}
+
+.security-text p {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+/* --- RESPONSIVIDADE LOCAL --- */
+@media (max-width: 1024px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-hero-content h1 {
+    font-size: 2.25rem;
+  }
+  
+  .contact-form-card {
+    padding: 30px 20px;
+  }
+  
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  
+  .form-group-full {
+    grid-column: span 1;
+  }
+  
+  .map-container img {
+    height: 150px;
+  }
+}

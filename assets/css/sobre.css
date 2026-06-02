@@ -1,0 +1,416 @@
+/* --- ABOUT HERO --- */
+.about-hero {
+  background-color: var(--bg-white);
+  padding: 80px 0;
+}
+
+.about-hero-content {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+
+.about-hero-text {
+  flex: 1.1;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.about-hero-text .tagline {
+  font-family: var(--font-title);
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--accent-gold);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.about-hero-text h1 {
+  font-size: 2.75rem;
+  color: var(--primary-navy);
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.about-hero-text p {
+  font-size: 1.05rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+/* Stats Row */
+.about-stats {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  margin-top: 12px;
+  border-top: 1px solid var(--border-color);
+  padding-top: 24px;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.stat-num {
+  font-family: var(--font-title);
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: var(--primary-navy);
+  line-height: 1;
+}
+
+.stat-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.stat-divider {
+  width: 1px;
+  height: 48px;
+  background-color: var(--border-color);
+}
+
+.about-hero-image {
+  flex: 0.9;
+}
+
+.about-hero-image img {
+  width: 100%;
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-lg);
+  aspect-ratio: 4/3;
+  object-fit: cover;
+}
+
+/* --- SYNERGY SECTION --- */
+.synergy {
+  background-color: var(--bg-light);
+}
+
+.synergy-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  grid-template-rows: auto auto auto;
+  gap: 30px;
+}
+
+.synergy-card {
+  border-radius: var(--border-radius-lg);
+  padding: 40px;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  transition: var(--transition-normal);
+}
+
+.synergy-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+}
+
+.synergy-card h3 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.synergy-card p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* Card 1: Rigor Jurídico (White, Tall/Wide) */
+.syn-rigor {
+  background-color: var(--bg-white);
+  grid-column: 1;
+  grid-row: 1 / 4;
+  border-top: 4px solid var(--border-color);
+}
+
+.syn-rigor:hover {
+  border-top-color: var(--accent-gold);
+}
+
+.syn-icon {
+  color: var(--accent-gold);
+  margin-bottom: 8px;
+}
+
+.syn-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--primary-navy);
+  margin-top: auto;
+  padding-top: 12px;
+}
+
+.syn-link:hover {
+  color: var(--accent-gold);
+}
+
+.syn-sub-title {
+  font-family: var(--font-title);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--primary-navy);
+  margin-top: 20px;
+  margin-bottom: 12px;
+}
+
+.syn-bullets {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.syn-bullets li {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: var(--text-muted);
+  position: relative;
+  padding-left: 20px;
+}
+
+.syn-bullets li::before {
+  content: "•";
+  color: var(--accent-gold);
+  font-weight: bold;
+  font-size: 1.2rem;
+  position: absolute;
+  left: 0;
+  top: -2px;
+}
+
+/* Card 2: Integridade Ética (Dark Blue) */
+.syn-etica {
+  background-color: var(--secondary-navy);
+  color: var(--text-light);
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.syn-etica h3 {
+  color: var(--text-light);
+}
+
+.syn-etica p {
+  color: var(--text-light-muted);
+}
+
+/* Card 3: Lógica do Varejo (Light Gray) */
+.syn-logica {
+  background-color: #E2E8F0;
+  grid-column: 2;
+  grid-row: 2;
+}
+
+.syn-logica h3 {
+  color: var(--primary-navy);
+}
+
+.syn-logica p {
+  color: var(--text-muted);
+}
+
+/* Card 4: Meticulosidade Contábil (Overlay / Image Bg) */
+.syn-contabil {
+  background-color: #CBD5E1;
+  background-image: linear-gradient(rgba(15, 38, 70, 0.85), rgba(15, 38, 70, 0.85)), url('../images/hero-home.png');
+  background-size: cover;
+  background-position: center;
+  color: var(--text-light);
+  grid-column: 2;
+  grid-row: 3;
+}
+
+.syn-contabil h3 {
+  color: var(--text-light);
+}
+
+.syn-contabil p {
+  color: var(--text-light-muted);
+}
+
+/* --- WORKFLOW SECTION --- */
+.workflow {
+  background-color: var(--bg-white);
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.workflow-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.workflow-card {
+  background-color: var(--bg-light);
+  border-radius: var(--border-radius-lg);
+  padding: 50px 30px 40px;
+  text-align: center;
+  box-shadow: var(--shadow-sm);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+.workflow-badge {
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 40px;
+  border-radius: var(--border-radius-circle);
+  background-color: var(--accent-gold);
+  color: var(--bg-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-title);
+  font-weight: 700;
+  font-size: 1rem;
+  box-shadow: var(--shadow-md);
+}
+
+.workflow-card-icon {
+  width: 48px;
+  height: 48px;
+  background-color: rgba(10, 28, 51, 0.06);
+  border-radius: var(--border-radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary-navy);
+}
+
+.workflow-card h3 {
+  font-size: 1.15rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--primary-navy);
+  font-weight: 700;
+}
+
+.workflow-card p {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+/* --- CTA BANNER --- */
+.about-cta {
+  background-color: var(--bg-light);
+}
+
+.cta-banner {
+  border-radius: var(--border-radius-lg);
+  padding: 80px 40px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+.cta-banner h2 {
+  font-size: 2.25rem;
+  color: var(--text-light);
+  font-weight: 800;
+  position: relative;
+  z-index: 2;
+}
+
+.cta-banner p {
+  font-size: 1.1rem;
+  color: var(--text-light-muted);
+  max-width: 700px;
+  line-height: 1.6;
+  position: relative;
+  z-index: 2;
+}
+
+.cta-banner .btn {
+  margin-top: 12px;
+  position: relative;
+  z-index: 2;
+}
+
+/* --- RESPONSIVIDADE LOCAL --- */
+@media (max-width: 1024px) {
+  .synergy-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+  
+  .syn-rigor {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  
+  .syn-etica {
+    grid-column: 1;
+    grid-row: 2;
+  }
+  
+  .syn-logica {
+    grid-column: 1;
+    grid-row: 3;
+  }
+  
+  .syn-contabil {
+    grid-column: 1;
+    grid-row: 4;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-hero-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 40px;
+  }
+  
+  .about-stats {
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .about-hero-image {
+    width: 100%;
+    max-width: 500px;
+  }
+  
+  .workflow-grid {
+    grid-template-columns: 1fr;
+    gap: 50px; /* Mais espaço por causa do badge top */
+  }
+  
+  .cta-banner {
+    padding: 60px 20px;
+  }
+  
+  .cta-banner h2 {
+    font-size: 1.75rem;
+  }
+  
+  .cta-banner .btn {
+    width: 100%;
+  }
+}
