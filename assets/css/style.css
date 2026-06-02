@@ -527,6 +527,19 @@ img {
     gap: 30px;
   }
   
+  .footer-col {
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-col ul {
+    align-items: center;
+  }
+
+  .footer-social-icons {
+    justify-content: center;
+  }
+  
   .footer-bottom {
     flex-direction: column;
     gap: 16px;

@@ -474,4 +474,12 @@
   .partner-logo-placeholder {
     flex: 0 0 40%;
   }
+
+  .hero-social {
+    justify-content: center;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 16px;
+    text-align: center;
+  }
 }

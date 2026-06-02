@@ -374,4 +374,9 @@
   .map-container img {
     height: 150px;
   }
+
+  .whatsapp-card, .instagram-card {
+    padding: 20px 16px;
+    gap: 12px;
+  }
 }
