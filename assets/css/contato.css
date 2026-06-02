@@ -183,6 +183,59 @@
   color: #166534;
 }
 
+/* Instagram Card */
+.instagram-card {
+  background-color: #FDF2F8; /* Light pink background */
+  border: 1px solid rgba(219, 39, 119, 0.2);
+  border-radius: var(--border-radius-lg);
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  cursor: pointer;
+  transition: var(--transition-normal);
+  color: var(--text-dark);
+}
+
+.instagram-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 15px -3px rgba(219, 39, 119, 0.1);
+}
+
+.instagram-icon-box {
+  width: 48px;
+  height: 48px;
+  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  color: var(--bg-white);
+  border-radius: var(--border-radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.instagram-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.instagram-text h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #9d174d; /* Pink 800 */
+}
+
+.instagram-text p {
+  font-size: 0.85rem;
+  color: #be185d; /* Pink 700 */
+}
+
+.instagram-arrow {
+  color: #9d174d;
+}
+
 /* Address & Map Card */
 .address-card {
   background-color: var(--bg-white);

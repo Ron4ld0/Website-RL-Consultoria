@@ -38,6 +38,29 @@
   margin-top: 12px;
 }
 
+.hero-social {
+  margin-top: 8px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--text-light-muted);
+  font-size: 0.95rem;
+}
+
+.hero-social-link {
+  color: var(--accent-gold);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 600;
+  transition: var(--transition-fast);
+}
+
+.hero-social-link:hover {
+  color: var(--bg-white);
+  transform: translateY(-1px);
+}
+
 .hero-image {
   flex: 0.9;
   position: relative;
