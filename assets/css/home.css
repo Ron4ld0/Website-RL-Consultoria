@@ -389,9 +389,20 @@
     text-align: center;
     gap: 40px;
   }
+
+  .hero-text h1 {
+    font-size: 2rem;
+    line-height: 1.25;
+  }
   
   .hero-buttons {
-    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    gap: 12px;
+  }
+
+  .hero-buttons .btn {
+    width: 100%;
   }
   
   .hero-image {
