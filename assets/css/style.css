@@ -439,6 +439,18 @@ img {
   gap: 24px;
 }
 
+.developer-credit a {
+  color: var(--primary-navy);
+  font-weight: 600;
+  border-bottom: 1px solid transparent;
+  transition: var(--transition-fast);
+}
+
+.developer-credit a:hover {
+  color: var(--accent-gold);
+  border-bottom-color: var(--accent-gold);
+}
+
 /* Animações e Revelação no Scroll */
 .reveal {
   opacity: 0;
