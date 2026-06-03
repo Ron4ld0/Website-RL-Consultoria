@@ -451,6 +451,19 @@ img {
   border-bottom-color: var(--accent-gold);
 }
 
+.developer-logo {
+  height: 20px;
+  width: auto;
+  vertical-align: middle;
+  display: inline-block;
+  margin-left: 6px;
+  transition: opacity var(--transition-fast);
+}
+
+.developer-logo:hover {
+  opacity: 0.8;
+}
+
 /* Animações e Revelação no Scroll */
 .reveal {
   opacity: 0;
