@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const form = document.getElementById('contact-form');
   const phoneInput = document.getElementById('phone');
   const emailInput = document.getElementById('email');
+  const cnpjInput = document.getElementById('cnpj');
 
   // 1. Preencher e-mail caso tenha vindo da Home
   const getQueryParam = (param) => {
@@ -38,6 +39,29 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // 2.2. Máscara de CNPJ 00.000.000/0000-00
+  if (cnpjInput) {
+    cnpjInput.addEventListener('input', (e) => {
+      let value = e.target.value.replace(/\D/g, ''); // Remove tudo que não for dígito
+
+      if (value.length > 14) {
+        value = value.substring(0, 14);
+      }
+
+      if (value.length > 12) {
+        e.target.value = `${value.substring(0, 2)}.${value.substring(2, 5)}.${value.substring(5, 8)}/${value.substring(8, 12)}-${value.substring(12)}`;
+      } else if (value.length > 8) {
+        e.target.value = `${value.substring(0, 2)}.${value.substring(2, 5)}.${value.substring(5, 8)}/${value.substring(8)}`;
+      } else if (value.length > 5) {
+        e.target.value = `${value.substring(0, 2)}.${value.substring(2, 5)}.${value.substring(5)}`;
+      } else if (value.length > 2) {
+        e.target.value = `${value.substring(0, 2)}.${value.substring(2)}`;
+      } else {
+        e.target.value = value;
+      }
+    });
+  }
+
   // 3. Validação e Submissão do Formulário
   if (form) {
     form.addEventListener('submit', (e) => {
@@ -54,6 +78,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const formData = {
         name: document.getElementById('name').value,
         company: document.getElementById('company').value,
+        cnpj: cnpjInput ? cnpjInput.value : '',
         regime: document.getElementById('regime').value,
         phone: phoneInput.value,
         email: emailInput.value
