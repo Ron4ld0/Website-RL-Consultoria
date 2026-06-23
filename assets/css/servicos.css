@@ -58,6 +58,10 @@
   grid-column: span 2; /* Um terço da largura na Linha 2 */
 }
 
+.services-grid .service-card:nth-child(6) {
+  grid-column: span 6; /* Largura total na Linha 3 */
+}
+
 /* Base Card Style */
 .service-card {
   border-radius: var(--border-radius-lg);
@@ -337,7 +341,8 @@
     grid-template-columns: repeat(2, 1fr);
   }
   
-  .services-grid .service-card:nth-child(1) {
+  .services-grid .service-card:nth-child(1),
+  .services-grid .service-card:nth-child(6) {
     grid-column: span 2; /* Ocupa largura total no tablet */
   }
   
